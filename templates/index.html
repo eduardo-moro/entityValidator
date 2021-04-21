@@ -3,12 +3,14 @@
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta charset="UTF-8">
         <title>Keiken - Registros Legais</title>
     </head>
     <body>
 
-    <h1 style="margin-bottom: 0;"> Keiken </h1>
+    <img src="https://keiken.app/wp-content/uploads/2020/08/Keiken_Marca-02.png" alt="keiken logo" width=200 style="filter: drop-shadow(1px 1px 4px black)">
+
     <h2> Consulta de registros nacionais </h2>
 
 
@@ -19,24 +21,16 @@
 
     <div class="postman-run-button" data-postman-action="collection/import" data-postman-var-1="cdcc588eccee0df0c75e" data-postman-param="env%5Bkeiken%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYmFzZXVybCIsInZhbHVlIjoibG9jYWxob3N0OjgwODAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENucGoiLCJ2YWx1ZSI6IjE0ODc1NTkyMDAwMTA4IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3RDZm4iLCJ2YWx1ZSI6IjAxMTAwMzc3IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3ROYW1lIiwidmFsdWUiOiJBTkEgQ0FST0xJTkEgUElOSEVJUk8gVk9MUCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ0ZXN0Q3JlZiIsInZhbHVlIjoiMDQ2Nzk3LVAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENyZWZQaiIsInZhbHVlIjoiMDAwNDg1IiwidHlwZSI6InRleHQifV0="></div>
 
-    <script type="text/javascript">
-      (function (p,o,s,t,m,a,n) {
-        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
-        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
-          (n = o.createElement("script")),
-          (n.id = s+t), (n.async = 1), (n.src = m), n
-        ));
-      }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-    </script>
-
-    <h3> Lista de pesquisas disponíveis:</h3>
-    <ul style="list-style: square">
-        <li>CNPJ:<pre><code>/api/cnpj/:cnpj</code></pre></li>
-        <li>CFEF - Cref:<pre><code>/api/cref/:cref</code></pre></li>
-        <li>CFEF - Cnpj:<pre><code>/api/crefpj/:cnpj</code></pre></li>
-        <li>CFN - CFN:<pre><code>/api/cfn/codigo/:cfn</code></pre></li>
-        <li>CFN - nome:<pre><code>/api/cfn/nome/:nome</code></pre></li>
-    </ul>
+    <details>
+        <summary> Lista de pesquisas disponíveis:</summary>
+        <ul style="list-style: square">
+            <li>CNPJ:<pre><code>/api/cnpj/:cnpj</code></pre></li>
+            <li>CFEF - Cref:<pre><code>/api/cref/:cref</code></pre></li>
+            <li>CFEF - Cnpj:<pre><code>/api/crefpj/:cnpj</code></pre></li>
+            <li>CFN - CFN:<pre><code>/api/cfn/codigo/:cfn</code></pre></li>
+            <li>CFN - nome:<pre><code>/api/cfn/nome/:nome</code></pre></li>
+        </ul>
+    </details>
 
     <h3> Build do projeto: </h3>
     <pre><code>sudo docker-compose build</code></pre>
@@ -45,6 +39,25 @@
 
     <h3> Rodando o projeto: </h3>
     <pre><code>sudo docker-compose up</code></pre>
+
+    <br>
+
+    <summary> Pesquisas de teste:</summary>
+    <label>CNPJ:</label>
+    <div class="form"><input type="text" placeholder="CNPJ" id="cnpj"><div data-url="/api/cnpj/" class="button">Buscar</div> </div>
+    <label>CREF:</label>
+    <div class="form"><input type="text" placeholder="CREF" id="cref"><div data-url="/api/cref/" class="button">Buscar</div> </div>
+    <label> - PJ:</label>
+    <div class="form"><input type="text" placeholder="CREF PJ" id="crefPj"><div data-url="/api/crefpj/" class="button">Buscar</div> </div>
+    <label>CFN:</label>
+    <div class="form"><input type="text" placeholder="CFN" id="cfn"><div data-url="/api/cfn/codigo/" class="button">Buscar</div> </div>
+    <label>CFN - Nome:</label>
+    <div class="form"><input type="text" placeholder="CFN - nome" id="cfnName"><div data-url="/api/cfn/nome/" class="button">Buscar</div> </div>
+
+
+    <pre id="results">
+
+    </pre>
 
     </body>
 </html>
@@ -59,12 +72,81 @@
         padding: 80px 72px;
     }
     pre {
-        background-color: #f7f7f7;
+        background-color: #333;
         padding: 12px 24px;
-        width: min-content;
         min-width: 280px;
-        margin-left: 24px;
         box-shadow: 1px 1px 4px black;
         border-radius: 4px;
+        color: white;
+    }
+    summary:hover {
+        cursor: pointer;
+    }
+
+    details[open] summary ~ * {
+      animation: sweep .5s ease;
+    }
+
+    @keyframes sweep {
+      0%    {opacity: 0; margin-left: -10px}
+      100%  {opacity: 1; margin-left: 0px}
+    }
+
+    .form {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        padding: 4px 0;
+    }
+
+    .button {
+        padding: 2px 12px;
+        border-radius: 3px;
+        background: #2CA5E0;
+        box-shadow: 1px 1px 3px black;
+        color: white;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    .button:active {
+        box-shadow: 1px 1px 3px black;
+    }
+
+    .button::selection{
+        background: none;
+    }
+
+    #results {
+        overflow-x: scroll;
     }
 </style>
+
+<script>
+    (function (p,o,s,t,m,a,n) {
+        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+            (n = o.createElement("script")),
+            (n.id = s+t), (n.async = 1), (n.src = m), n
+        ));
+    }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+
+    $(".button").on("click", (e) => {
+      let url = $(e.target).attr("data-url")
+      let data = $($(e.target).parent()).find("input").val()
+      url += data
+      $.ajax({
+        url: url,
+        method: "get",
+        success: data => {
+            $("#results").text(JSON.stringify(data, null, 2))
+        },
+        error: data => {
+            $("#results").text(JSON.stringify(data, null, 2))
+        }
+      })
+    })
+</script>
