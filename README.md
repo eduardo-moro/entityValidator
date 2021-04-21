@@ -1,6 +1,5 @@
-<picture style="float: right; max-width: 180px !importan">
-    <img src="https://i.pinimg.com/originals/f0/1f/69/f01f692c14ed47421cbc564ae4bf0ed3.png" alt="golang logo"  style="max-width: 180px">
-</picture>
+<img align="right" src="https://i.pinimg.com/originals/f0/1f/69/f01f692c14ed47421cbc564ae4bf0ed3.png" alt="golang logo"  width: 180>
+
 <h1 style="margin-bottom: 0;"> Keiken </h1>
 <h2 style="margin-top: -10px;"> Consulta de registros nacionais </h2>
 
