@@ -7,9 +7,9 @@ import (
 	"strings"
 )
 
-func GetCfn() (string, string) {
+func GetCfnByCode(codigo string) (string, string) {
 	return makeRequest("https://cnn.cfn.org.br/application/front-resource/get",
-		"{\"comando\":\"get-nutricionista\",\"options\":{\"geral\":true}}")
+		"{\"comando\":\"get-nutricionista\",\"options\":{\"geral\":true, \"registro\": \""+codigo+"\"}}")
 }
 
 

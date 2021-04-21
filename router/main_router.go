@@ -16,13 +16,16 @@ func InitRouter() *gin.Engine {
 		c.HTML(http.StatusOK, "index.html", "")
 	})
 
-	router.GET("/api/main", func(c *gin.Context) {
-		status, body := request.GetCfn()
+	router.GET("/api/cfn/:registro", func(c *gin.Context) {
+		codigo := c.Param("registro")
+
+		status, body := request.GetCfnByCode(codigo)
 
 		log.Println(status)
 
 		c.JSON(http.StatusOK, gin.H{
-			"body": body,
+			"items": body,
+			"error": "",
 		})
 	})
 
