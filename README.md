@@ -1,4 +1,4 @@
-<picture style="float: right;">
+<picture style="float: right;" style="max-width: 180px">
     <img src="https://i.pinimg.com/originals/f0/1f/69/f01f692c14ed47421cbc564ae4bf0ed3.png" alt="golang logo"  style="max-width: 180px">
 </picture>
 <h1 style="margin-bottom: 0;"> Keiken </h1>
