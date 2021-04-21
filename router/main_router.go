@@ -16,7 +16,7 @@ func InitRouter() *gin.Engine {
 		c.HTML(http.StatusOK, "index.html", "")
 	})
 
-	router.GET("/api/cfn/:registro", func(c *gin.Context) {
+	router.GET("/api/cfn/codigo/:registro", func(c *gin.Context) {
 		codigo := c.Param("registro")
 
 		status, body := request.GetCfnByCode(codigo)
