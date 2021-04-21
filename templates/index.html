@@ -48,7 +48,7 @@
     <div class="form"><input type="text" placeholder="CNPJ" id="cnpj"><div data-url="/api/cnpj/" class="button">Buscar</div> </div>
     <label>CREF:</label>
     <div class="form"><input type="text" placeholder="CREF" id="cref"><div data-url="/api/cref/" class="button">Buscar</div> </div>
-    <label> - PJ:</label>
+    <label>CREF - PJ:</label>
     <div class="form"><input type="text" placeholder="CREF PJ" id="crefPj"><div data-url="/api/crefpj/" class="button">Buscar</div> </div>
     <label>CFN:</label>
     <div class="form"><input type="text" placeholder="CFN" id="cfn"><div data-url="/api/cfn/codigo/" class="button">Buscar</div> </div>
@@ -70,7 +70,7 @@
     body {
         font-family: 'Varela Round', sans-serif;
         font-weight: 100;
-        padding: 8%;
+        padding: 12px;
     }
     pre {
         background-color: #333;
@@ -82,6 +82,7 @@
     }
 
     input {
+        width: 100%;
         background-color: #333;
         padding: 12px 24px;
         display: flex;
@@ -105,9 +106,9 @@
 
     .form {
         display: flex;
-        width: 300px;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 4px 0;
+        flex: 1;
     }
 
     .button {
