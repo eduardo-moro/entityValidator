@@ -16,14 +16,26 @@
     <img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
     <img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
     <img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel>
-    <img src="https://img.shields.io/badge/MySQL-7.8-00000F?style=for-the-badge&logo=mysql&logoColor=white" rel>
+
+    <div class="postman-run-button" data-postman-action="collection/import" data-postman-var-1="cdcc588eccee0df0c75e" data-postman-param="env%5Bkeiken%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYmFzZXVybCIsInZhbHVlIjoibG9jYWxob3N0OjgwODAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENucGoiLCJ2YWx1ZSI6IjE0ODc1NTkyMDAwMTA4IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3RDZm4iLCJ2YWx1ZSI6IjAxMTAwMzc3IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3ROYW1lIiwidmFsdWUiOiJBTkEgQ0FST0xJTkEgUElOSEVJUk8gVk9MUCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ0ZXN0Q3JlZiIsInZhbHVlIjoiMDQ2Nzk3LVAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENyZWZQaiIsInZhbHVlIjoiMDAwNDg1IiwidHlwZSI6InRleHQifV0="></div>
+
+    <script type="text/javascript">
+      (function (p,o,s,t,m,a,n) {
+        !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+        !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+          (n = o.createElement("script")),
+          (n.id = s+t), (n.async = 1), (n.src = m), n
+        ));
+      }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+    </script>
 
     <h3> Lista de pesquisas disponíveis:</h3>
     <ul style="list-style: square">
-        <li>CFPJ</li>
-        <li>CFEF</li>
-        <li>CFP</li>
-        <li>CFN</li>
+        <li>CNPJ:<pre><code>/api/cnpj/:cnpj</code></pre></li>
+        <li>CFEF - Cref:<pre><code>/api/cref/:cref</code></pre></li>
+        <li>CFEF - Cnpj:<pre><code>/api/crefpj/:cnpj</code></pre></li>
+        <li>CFN - CFN:<pre><code>/api/cfn/codigo/:cfn</code></pre></li>
+        <li>CFN - nome:<pre><code>/api/cfn/nome/:nome</code></pre></li>
     </ul>
 
     <h3> Build do projeto: </h3>
