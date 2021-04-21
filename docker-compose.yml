@@ -11,7 +11,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: ./main/DockerFile
+      dockerfile: DockerFile
       target: builder
     ports:
     - 9000:9000

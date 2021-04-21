@@ -3,7 +3,6 @@ package router
 import (
 	request "entityValidator.com/request"
 	gin "github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
@@ -16,18 +15,38 @@ func InitRouter() *gin.Engine {
 		c.HTML(http.StatusOK, "index.html", "")
 	})
 
-	router.GET("/api/cfn/codigo/:registro", func(c *gin.Context) {
-		codigo := c.Param("registro")
-
-		status, body := request.GetCfnByCode(codigo)
-
-		log.Println(status)
-
-		c.JSON(http.StatusOK, gin.H{
-			"items": body,
-			"error": "",
+	api := router.Group("/api")
+	{
+		api.GET("/cfn/codigo/:registro", func(c *gin.Context) {
+			codigo := c.Param("registro")
+			_, body := request.GetCfnByCode(codigo)
+			c.Data(http.StatusOK, "application/json", []byte(body))
 		})
-	})
+
+		api.GET("/cfn/nome/:nome", func(c *gin.Context) {
+			nome := c.Param("nome")
+			_, body := request.GetCfnByName(nome)
+			c.Data(http.StatusOK, "application/json", []byte(body))
+		})
+
+		api.GET("/cnpj/:cnpj", func(c *gin.Context) {
+			cnpj := c.Param("cnpj")
+			_, body := request.GetCnpj(cnpj)
+			c.Data(http.StatusOK, "application/json", []byte(body))
+		})
+
+		api.GET("/cref/:cref", func(c *gin.Context) {
+			cref := c.Param("cref")
+			_, body := request.GetCref(cref)
+			c.Data(http.StatusOK, "application/json", []byte(body))
+		})
+
+		api.GET("/crefpj/:cref", func(c *gin.Context) {
+			cref := c.Param("cref")
+			_, body := request.GetCrefPj(cref)
+			c.Data(http.StatusOK, "application/json", []byte(body))
+		})
+	}
 
 	return router
 }
