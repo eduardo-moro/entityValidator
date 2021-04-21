@@ -28,3 +28,5 @@ FROM golang:${GO_VERSION}-alpine as builder
 
     expose 8080
     expose 80
+
+    RUN reflex -r "\.go$$" -s -- sh -c "go run /go/src/entityValidator.com/main.go"
