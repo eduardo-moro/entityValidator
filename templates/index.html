@@ -9,58 +9,49 @@
         <title>Keiken - Registros Legais</title>
     </head>
     <body>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: absolute; top: 0; left: 0; z-index: -10"><path fill="#b3ff00" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,197.3C384,181,480,107,576,85.3C672,64,768,96,864,133.3C960,171,1056,213,1152,240C1248,267,1344,277,1392,282.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <img src="https://keiken.app/wp-content/uploads/2020/08/Keiken_Marca-02.png" alt="keiken logo" width=200 style="filter: drop-shadow(1px 1px 4px black)">
+            <h2> Consulta de registros nacionais </h2>
+            <img src="https://img.shields.io/badge/Docker-20.10.2-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" rel>
+            <img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
+            <img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
+            <img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: absolute; top: 0; left: 0; z-index: -10"><path fill="#b3ff00" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,197.3C384,181,480,107,576,85.3C672,64,768,96,864,133.3C960,171,1056,213,1152,240C1248,267,1344,277,1392,282.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+            <div class="postman-run-button" data-postman-action="collection/import" data-postman-var-1="cdcc588eccee0df0c75e" data-postman-param="env%5Bkeiken%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYmFzZXVybCIsInZhbHVlIjoibG9jYWxob3N0OjgwODAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENucGoiLCJ2YWx1ZSI6IjE0ODc1NTkyMDAwMTA4IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3RDZm4iLCJ2YWx1ZSI6IjAxMTAwMzc3IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3ROYW1lIiwidmFsdWUiOiJBTkEgQ0FST0xJTkEgUElOSEVJUk8gVk9MUCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ0ZXN0Q3JlZiIsInZhbHVlIjoiMDQ2Nzk3LVAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENyZWZQaiIsInZhbHVlIjoiMDAwNDg1IiwidHlwZSI6InRleHQifV0="></div>
 
-    <img src="https://keiken.app/wp-content/uploads/2020/08/Keiken_Marca-02.png" alt="keiken logo" width=200 style="filter: drop-shadow(1px 1px 4px black)">
+            <details>
+                <summary> Lista de pesquisas disponíveis:</summary>
+                <ul style="list-style: square">
+                    <li>CNPJ:<pre><code>/api/cnpj/:cnpj</code></pre></li>
+                    <li>CFEF - Cref:<pre><code>/api/cref/:cref</code></pre></li>
+                    <li>CFEF - Cnpj:<pre><code>/api/crefpj/:cnpj</code></pre></li>
+                    <li>CFN - CFN:<pre><code>/api/cfn/codigo/:cfn</code></pre></li>
+                    <li>CFN - nome:<pre><code>/api/cfn/nome/:nome</code></pre></li>
+                </ul>
+            </details>
 
-    <h2> Consulta de registros nacionais </h2>
+            <h3> Build do projeto: </h3>
+            <pre><code>sudo docker-compose build</code></pre>
 
-    <img src="https://img.shields.io/badge/Docker-20.10.2-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" rel>
-    <img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
-    <img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
-    <img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel>
+            <br>
 
-    <div class="postman-run-button" data-postman-action="collection/import" data-postman-var-1="cdcc588eccee0df0c75e" data-postman-param="env%5Bkeiken%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYmFzZXVybCIsInZhbHVlIjoibG9jYWxob3N0OjgwODAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENucGoiLCJ2YWx1ZSI6IjE0ODc1NTkyMDAwMTA4IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3RDZm4iLCJ2YWx1ZSI6IjAxMTAwMzc3IiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InRlc3ROYW1lIiwidmFsdWUiOiJBTkEgQ0FST0xJTkEgUElOSEVJUk8gVk9MUCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ0ZXN0Q3JlZiIsInZhbHVlIjoiMDQ2Nzk3LVAiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidGVzdENyZWZQaiIsInZhbHVlIjoiMDAwNDg1IiwidHlwZSI6InRleHQifV0="></div>
+            <h3> Rodando o projeto: </h3>
+            <pre><code>sudo docker-compose up</code></pre>
 
-    <details>
-        <summary> Lista de pesquisas disponíveis:</summary>
-        <ul style="list-style: square">
-            <li>CNPJ:<pre><code>/api/cnpj/:cnpj</code></pre></li>
-            <li>CFEF - Cref:<pre><code>/api/cref/:cref</code></pre></li>
-            <li>CFEF - Cnpj:<pre><code>/api/crefpj/:cnpj</code></pre></li>
-            <li>CFN - CFN:<pre><code>/api/cfn/codigo/:cfn</code></pre></li>
-            <li>CFN - nome:<pre><code>/api/cfn/nome/:nome</code></pre></li>
-        </ul>
-    </details>
-
-    <h3> Build do projeto: </h3>
-    <pre><code>sudo docker-compose build</code></pre>
-
-    <br>
-
-    <h3> Rodando o projeto: </h3>
-    <pre><code>sudo docker-compose up</code></pre>
-
-    <br>
-
-    <summary> Pesquisas de teste:</summary>
-    <label>CNPJ:</label>
-    <div class="form"><input type="text" placeholder="CNPJ" id="cnpj"><div data-url="/api/cnpj/" class="button">Buscar</div> </div>
-    <label>CREF:</label>
-    <div class="form"><input type="text" placeholder="CREF" id="cref"><div data-url="/api/cref/" class="button">Buscar</div> </div>
-    <label>CREF - PJ:</label>
-    <div class="form"><input type="text" placeholder="CREF PJ" id="crefPj"><div data-url="/api/crefpj/" class="button">Buscar</div> </div>
-    <label>CFN:</label>
-    <div class="form"><input type="text" placeholder="CFN" id="cfn"><div data-url="/api/cfn/codigo/" class="button">Buscar</div> </div>
-    <label>CFN - Nome:</label>
-    <div class="form"><input type="text" placeholder="CFN - nome" id="cfnName"><div data-url="/api/cfn/nome/" class="button">Buscar</div> </div>
-
-
-    <pre id="results">
-
-    </pre>
-
+            <br>
+            <summary> Pesquisas de teste:</summary>
+            <label>CNPJ:</label>
+            <div class="form"><input type="text" placeholder="CNPJ" id="cnpj"><div data-url="/api/cnpj/" class="button">Buscar</div> </div>
+            <label>CREF:</label>
+            <div class="form"><input type="text" placeholder="CREF" id="cref"><div data-url="/api/cref/" class="button">Buscar</div> </div>
+            <label>CREF - PJ:</label>
+            <div class="form"><input type="text" placeholder="CREF PJ" id="crefPj"><div data-url="/api/crefpj/" class="button">Buscar</div> </div>
+            <label>CFN:</label>
+            <div class="form"><input type="text" placeholder="CFN" id="cfn"><div data-url="/api/cfn/codigo/" class="button">Buscar</div> </div>
+            <label>CFN - Nome:</label>
+            <div class="form"><input type="text" placeholder="CFN - nome" id="cfnName"><div data-url="/api/cfn/nome/" class="button">Buscar</div> </div>
+            <pre id="results"></pre>
+        </div>
     </body>
 </html>
 
@@ -141,7 +132,11 @@
         overflow-x: scroll;
     }
 
-    @media only screen and (max-width: 600px) {
+    pre {
+        max-height: 300px;
+    }
+
+    @media only screen and (max-width: 767px) {
         body {
             padding: 12px;
         }
