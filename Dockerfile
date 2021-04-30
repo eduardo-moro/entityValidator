@@ -17,16 +17,18 @@ FROM golang:${GO_VERSION}-alpine as builder
 
     run go get github.com/cespare/reflex
     run go get -u github.com/gin-gonic/gin
-    run go get github.com/aws/aws-lambda-go/lambda
+    run go get github.com/aws/aws-lambda-go/events
+    run go get github.com/olivere/elastic
+    run go get github.com/smartystreets/go-aws-auth
 
     RUN apk del .build-deps && rm -rf ~/.cache
 
     COPY /router /usr/local/go/src/entityValidator.com/router
     COPY /request /usr/local/go/src/entityValidator.com/request
+    COPY /elastic /usr/local/go/src/entityValidator.com/elastic
 
     COPY . /go/src/entityValidator.com/
 
     expose 8080
     expose 80
 
-    RUN reflex -r "\.go$$" -s -- sh -c "go run /go/src/entityValidator.com/main.go"

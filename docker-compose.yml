@@ -8,12 +8,18 @@ services:
       context: .
       dockerfile: Dockerfile
       target: builder
+    environment:
+      - ELASTICSEARCH_URL=https://search-dev-api-search-hyj6cooggcmidfl4gqnduuloxq.us-east-1.es.amazonaws.com/
+      - AWS_ACCESS_KEY=user-dev-es
+      - AWS_SECRET_KEY=Keiken-35-dev#
+      - CNPJ_TOKEN=109287950kcQnOEJTwL197316080
     ports:
     - 9000:9000
     - 8080:8080
     volumes:
     - ./router/:/usr/local/go/src/entityValidator.com/router/
     - ./request/:/usr/local/go/src/entityValidator.com/request/
+    - ./elastic/:/usr/local/go/src/entityValidator.com/elastic/
     - ./:/go/src/entityValidator.com/
     command: reflex -r "\.go$$" -s -- sh -c "go run /go/src/entityValidator.com/main.go"
 
