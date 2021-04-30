@@ -62,15 +62,15 @@ func main() {
 
 func printLogo() {
 	fmt.Println("")
-	fmt.Println("     888                    888                            ")
-	fmt.Println("     888   .op .ooooo.  ooo 888   .op  .ooooo.  oo. .oo.   ")
-	fmt.Println("     888 .8P' d88   88b 888 888 .8P'  d88   88b 888P\"Y88b  ")
-	fmt.Println("     888888.  888bod888 888 888888.   888bod888 888   888  ")
-	fmt.Println("     888 `8b. 888    .o 888 888 `8b.  888    .o 888   888  ")
-	fmt.Println("     888   `8b`Y8bod8P' 888 888   `8b.`Y8bod8P' 888   888  ")
+	fmt.Println("  888                    888                            ")
+	fmt.Println("  888   .op .ooooo.  ooo 888   .op  .ooooo.  oo. .oo.   ")
+	fmt.Println("  888 .8P' d88   88b 888 888 .8P'  d88   88b 888P\"Y88b  ")
+	fmt.Println("  888888.  888bod888 888 888888.   888bod888 888   888  ")
+	fmt.Println("  888 `8b. 888    .o 888 888 `8b.  888    .o 888   888  ")
+	fmt.Println("  888   `8b`Y8bod8P' 888 888   `8b.`Y8bod8P' 888   888  ")
 	fmt.Println("")
-	fmt.Println("     Validação de registros nacionais de profissionais cadastrados")
+	fmt.Println("  Validação de registros nacionais de profissionais cadastrados")
 	fmt.Println("")
-	fmt.Println("                                      made with ❤️by eduardo-moro")
+	fmt.Println("                                   made with ❤️by eduardo-moro")
 	fmt.Println("")
 }
