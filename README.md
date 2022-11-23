@@ -12,6 +12,8 @@
 <img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
 <img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
 <img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel>
+<img src="https://img.shields.io/badge/ElasticSearch-7.12-1793D1?style=for-the-badge&logo=elasticsearch&logoColor=white" rel>
+
 
 <details>
 <summary> Lista de pesquisas disponíveis:</summary>
@@ -30,3 +32,6 @@
 <h3> Rodando o projeto: </h3>
 <pre><code>sudo docker-compose up</code></pre>
 
+<a href="https://eduardo-moro.github.io/entityValidator/">
+<img src="https://img.shields.io/badge/View on-github pages-2CA5E0?style=for-the-badge&logo=github&logoColor=white" rel>
+</a>
