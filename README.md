@@ -8,11 +8,7 @@
 <h2 style="margin-top: -10px;"> Consulta de registros nacionais </h2>
 
 
-<img src="https://img.shields.io/badge/Docker-20.10.2-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" rel>
-<img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
-<img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel>
-<img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel>
-<img src="https://img.shields.io/badge/ElasticSearch-7.12-1793D1?style=for-the-badge&logo=elasticsearch&logoColor=white" rel>
+<img src="https://img.shields.io/badge/Docker-20.10.2-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" rel><img src="https://img.shields.io/badge/Go-1.13.15-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel><img src="https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white" rel><img src="https://img.shields.io/badge/Alpine_Linux-3.12-1793D1?style=for-the-badge&logo=alpine-linux&logoColor=white" rel><img src="https://img.shields.io/badge/ElasticSearch-7.12-1793D1?style=for-the-badge&logo=elasticsearch&logoColor=white" rel>
 
 
 <details>
