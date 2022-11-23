@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/keiken-entityValidator.iml" filepath="$PROJECT_DIR$/.idea/keiken-entityValidator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/entityValidator.iml" filepath="$PROJECT_DIR$/.idea/entityValidator.iml" />
     </modules>
   </component>
 </project>
