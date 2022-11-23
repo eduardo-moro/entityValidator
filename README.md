@@ -32,6 +32,6 @@
 <h3> Rodando o projeto: </h3>
 <pre><code>sudo docker-compose up</code></pre>
 
-<a href="https://eduardo-moro.github.io/entityValidator/">
+<a href="https://eduardo-moro.github.io/entityValidator/" target="_blank">
 <img src="https://img.shields.io/badge/View on-github pages-2CA5E0?style=for-the-badge&logo=github&logoColor=white" rel>
 </a>
